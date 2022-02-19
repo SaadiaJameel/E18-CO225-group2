@@ -1,5 +1,8 @@
 ___
-# DELETE THIS INSTRUCTIONS AND ADD A SHORT INTRODUCTION ABOUT YOUR PROJECT
+# A Student Resut Management System
+## The aim is to build a mobile application to manage and analyze undergraduate students’
+marks.
+
 ___
 
 ## Please refer the instructions in below URL:
