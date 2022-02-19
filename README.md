@@ -1,6 +1,6 @@
 ___
-# A Student Resut Management System
-## The aim is to build a mobile application to manage and analyze undergraduate students’ marks
+# A Student Result Management System
+## The aim is to build a mobile application to manage and analyze undergraduate students’ marks.
 
 ___
 
