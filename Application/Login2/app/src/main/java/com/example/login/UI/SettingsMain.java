@@ -28,10 +28,23 @@ public class SettingsMain extends AppCompatActivity {
                 openAddsemester();
             }
         });
+
+        handlesChange = (MaterialButton) findViewById(R.id.Handle);
+        handlesChange.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openChangeHandles();
+            }
+        });
     }
 
     public void openAddsemester(){
         Intent intent = new Intent(this, AddSemester.class);
+        startActivity(intent);
+    }
+
+    public void openChangeHandles(){
+        Intent intent = new Intent(this, changeHandles.class);
         startActivity(intent);
     }
 }

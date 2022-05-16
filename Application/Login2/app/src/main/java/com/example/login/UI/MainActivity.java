@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSettings(){
-        Intent intent = new Intent(this, SettingsMain.class);
+        Intent intent = new Intent(this, SemesterAllStudent.class);
         startActivity(intent);
     }
 
