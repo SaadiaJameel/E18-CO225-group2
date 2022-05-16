@@ -15,7 +15,7 @@
         android:textColor="@color/white"
         android:textSize="16dp"
         android:textStyle="bold"
-        android:layout_margin="70dp"
+        android:layout_margin="50dp"
         android:gravity="center"
         />
 
@@ -31,7 +31,7 @@
         android:background="#30ffffff"
         android:hint="Username"
         android:inputType="text"
-        android:padding="15dp"
+        android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white" />
 
@@ -41,7 +41,7 @@
         android:id="@+id/mail"
         android:hint="E-mail"
         android:layout_below="@+id/uname"
-        android:padding="15dp"
+        android:padding="10dp"
         android:background="#30ffffff"
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
@@ -61,7 +61,7 @@
         android:layout_marginRight="10dp"
         android:background="#30ffffff"
         android:hint="Create password"
-        android:padding="15dp"
+        android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:inputType ="textPassword"
@@ -75,13 +75,151 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
         android:background="#30ffffff"
         android:hint="Confirm password"
-        android:padding="15dp"
+        android:padding="10dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:inputType ="textPassword"
         />
+
+    <CheckBox
+        android:id="@+id/Rep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Batch admin"
+        android:layout_below="@+id/confirmpsword"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+
+
+        />
+
+
+
+    <Spinner
+        android:id="@+id/University"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Rep"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        />
+
+    <Spinner
+        android:id="@+id/Faculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/University"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        />
+
+    <Spinner
+        android:id="@+id/Batch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Faculty"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        />
+
+    <Spinner
+        android:id="@+id/Field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Batch"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="20dp"
+        android:textColorHint="@color/white"
+        />
+
+<!--    <EditText-->
+<!--        android:id="@+id/Uni"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/FieldGroup"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="26dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="#30ffffff"-->
+<!--        android:hint="University"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        android:visibility="visible"-->
+
+
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/Batch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/Uni"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="#30ffffff"-->
+<!--        android:hint="Batch"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        android:inputType ="textPassword"-->
+<!--        android:visibility="visible"-->
+
+<!--        />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/Faculty"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/Batch"-->
+<!--        android:layout_marginTop="5dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="#30ffffff"-->
+<!--        android:hint="Faculty"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textColorHint="@color/white"-->
+<!--        android:inputType ="textPassword"-->
+<!--        android:visibility="visible"-->
+
+<!--        />-->
+
+
+
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/Rep"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Batch admin"-->
+<!--        android:layout_below="@+id/confirmpsword"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+
+
+<!--        />-->
+
+
+
 
 <!--    <TextView-->
 <!--        android:id="@+id/displaymessage"-->
@@ -106,11 +244,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/confirmpsword"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="340dp"
         android:backgroundTint="@color/cardview_shadow_start_color"
         android:text="Register"
         android:textColor="@color/white"
         />
+
+
 
 
 </RelativeLayout>

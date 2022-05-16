@@ -20,7 +20,7 @@ public class RetroFitService {
 
         //use retrofit builder
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://10.30.87.132:8080")           //server address
+                .baseUrl("http://10.30.84.75:8080")           //server address
                 .addConverterFactory(GsonConverterFactory.create(new Gson()))       //use json library from google
                 .build();
     }
