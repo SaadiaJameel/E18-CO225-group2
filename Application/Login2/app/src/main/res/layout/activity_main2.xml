@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
     tools:context=".UI.MainActivity2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
@@ -97,6 +101,19 @@
 
         />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/UniversityText"
+        android:layout_below="@+id/Rep"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="250dp"
+        android:padding="10dp"
+        android:text="University"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        />
 
 
     <Spinner
@@ -104,11 +121,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Rep"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="20dp"
         android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FacultyText"
+        android:layout_below="@+id/University"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="250dp"
+        android:padding="10dp"
+        android:text="Faculty"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         />
 
     <Spinner
@@ -116,11 +147,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/University"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="20dp"
         android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BatchText"
+        android:layout_below="@+id/Faculty"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="250dp"
+        android:padding="10dp"
+        android:text="Batch"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         />
 
     <Spinner
@@ -128,11 +173,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Faculty"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:padding="20dp"
         android:textColorHint="@color/white"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FieldText"
+        android:layout_below="@+id/Batch"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="250dp"
+        android:layout_marginBottom="0dp"
+        android:padding="10dp"
+        android:text="Field"
+        android:textColor="@color/white"
+        android:textSize="18dp"
         />
 
     <Spinner
@@ -140,9 +200,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Batch"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
+        android:layout_marginBottom="0dp"
         android:padding="20dp"
         android:textColorHint="@color/white"
         />
@@ -238,19 +299,18 @@
 
 <!--        />-->
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/confirmpsword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="340dp"
-        android:backgroundTint="@color/cardview_shadow_start_color"
-        android:text="Register"
-        android:textColor="@color/white"
-        />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirmpsword"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="340dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:text="Register"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
 
 
-
-
-</RelativeLayout>
+</ScrollView>
