@@ -1,0 +1,46 @@
+<!--<resources>-->
+<!--    <string name="app_name">Login</string>-->
+<!--</resources>-->
+
+<resources>
+    <string name="app_name">Login</string>
+    <string name="title_activity_semester_page">SemesterPage</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_each_semester">EachSemester</string>
+    <string name="title_activity_each_course">EachCourse</string>
+    <string name="semesters">Semesters</string>
+    <string name="courses">Courses</string>
+    <string name="semester_1">Semester 1</string>
+    <string name="semester_2">Semester 2</string>
+    <string name="semester_3">Semester 3</string>
+    <string name="semester_4">Semester 4</string>
+    <string name="semester_5">Semester 5</string>
+    <string name="semester_1_subject1">CO 221 Digital Design</string>
+    <string name="semester_1_subject2">CO 222 Programming Methodology</string>
+    <string name="semester_1_subject3">CO 223 Computer Communication Networks</string>
+    <string name="semester_1_subject4">EM 211 Ordinary Differential Equations</string>
+    <string name="semester_1_subject5">EM 213 Probability and Statistics</string>
+    <string name="semester_1_subject6">EM 215 Discrete Mathematics</string>
+    <string name="semester_1_subject7">EE 282 Network Analysis for CE</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="title_activity_main5">MainActivity5</string>
+    <string name="quizes">Quizes</string>
+    <string name="projects">Projects</string>
+    <string name="assignments">Assignments</string>
+    <string name="exam">Exam</string>
+    <string name="quizes_marksp">10</string>
+    <string name="projects_marksp">20</string>
+    <string name="assignments_marksp">10</string>
+    <string name="exam_marksp">60</string>
+    <string name="buttonaddfinalgrade">Add</string>
+    <string name="buttondeletefinalgrade">Delete</string>
+    <string name="finalgrade">Final Grade</string>
+    <string name="entergrade">Grade</string>
+</resources>

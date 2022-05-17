@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".UI.MainActivity">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="87dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="468dp"
+            android:gravity="center"
+            android:text="GPA Calculator"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="-400dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:hint="Username"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="text"
+            />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="#30ffffff"
+            android:hint="Password"
+            android:padding="15dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:inputType="textPassword"
+            />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signinbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="45dp"
+            android:backgroundTint="@color/white"
+            android:text="Sign in"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/forgotpswd"
+            android:layout_below="@+id/signinbtn"
+            android:text="Forgot Password"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signupbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forgotpswd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:text="Sign up"
+            android:textColor="@color/white" />
+
+        <!--    <ImageView-->
+        <!--        android:id="@+id/gradcap"-->
+        <!--        android:layout_width="120dp"-->
+        <!--        android:layout_height="120dp"-->
+        <!--        android:layout_above="@+id/name"-->
+        <!--        android:layout_alignParentStart="true"-->
+        <!--        android:layout_alignParentTop="true"-->
+        <!--        android:layout_alignParentEnd="true"-->
+        <!--        android:layout_marginStart="146dp"-->
+        <!--        android:layout_marginTop="50dp"-->
+        <!--        android:layout_marginBottom="44dp"-->
+        <!--        android:layout_marginEnd="145dp"-->
+        <!--        android:src="@drawable/cap" />-->
+
+
+
+</RelativeLayout>
