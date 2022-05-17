@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="Courses">
+        <item>@string/semester_1_subject1</item>
+        <item>@string/semester_1_subject2</item>
+        <item>@string/semester_1_subject3</item>
+        <item>@string/semester_1_subject4</item>
+        <item>@string/semester_1_subject5</item>
+        <item>@string/semester_1_subject6</item>
+        <item>@string/semester_1_subject7</item>
+
+    </string-array>
+
+
+
+
+</resources>
