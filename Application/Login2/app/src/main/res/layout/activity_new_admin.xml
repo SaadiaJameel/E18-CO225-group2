@@ -15,11 +15,11 @@
         android:hint="Enter the username of the new batch admin"
         android:textColorHint="@color/white"
         android:textAlignment="center"
-        android:inputType="textPassword"
         android:background="#30ffffff"
         android:padding="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:inputType="text"
 
         />
 
@@ -32,11 +32,11 @@
         android:hint="Re-enter the username of the new batch admin"
         android:textColorHint="@color/white"
         android:textAlignment="center"
-        android:inputType="textPassword"
         android:background="#30ffffff"
         android:padding="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:inputType="text"
 
         />
 

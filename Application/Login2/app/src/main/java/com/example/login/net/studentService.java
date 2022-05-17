@@ -19,4 +19,5 @@ public interface studentService {
     @POST("/student/save")
     Call<StudentModel> signup(@Body StudentModel studentmodel); //Body
 
+
 }

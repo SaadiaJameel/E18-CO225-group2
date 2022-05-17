@@ -55,18 +55,6 @@ public class StudentModel implements Parcelable{
         password = in.readString();
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-
-    public StudentModel() {
-
-    }
-
-
-
 
 
     public StudentModel(String username, String password, String email, int batchgroup, int fieldgroup,
@@ -253,6 +241,16 @@ public class StudentModel implements Parcelable{
                 + ", batchgroup=" + batchgroup + ", fieldgroup=" + fieldgroup + ", isRep=" + isRep + ", gpa=" + gpa
                 + ", batchrank=" + batchrank + ", fieldrank=" + fieldrank + ", uni=" + uni + ", batch=" + batch
                 + ", faculty=" + faculty + ", field=" + field + "]";
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+
+    public StudentModel() {
+
     }
 
     @Override
