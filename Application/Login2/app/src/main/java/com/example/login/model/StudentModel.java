@@ -7,8 +7,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class StudentModel implements Parcelable{
 
-
-
     @SerializedName("id")
     private long id;
     @SerializedName("username")
