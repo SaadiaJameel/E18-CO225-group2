@@ -9,7 +9,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.login.R;
+import com.example.login.model.StudentModel;
+import com.example.login.net.studentService;
+import com.example.login.retrofit.RetroFitService;
 import com.google.android.material.button.MaterialButton;
+
+import java.io.IOException;
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,11 +37,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         username = (TextView) findViewById(R.id.username);
-
         password = (TextView) findViewById(R.id.password);
 
         signin = (MaterialButton) findViewById(R.id.signinbtn);
         signupbtn = (MaterialButton) findViewById(R.id.signupbtn);
+
+        //use retrofit service
+        RetroFitService retrofit = new RetroFitService();
+
+        //create instance of employee api object
+        studentService studentapi=retrofit.getRetrofit().create(studentService.class);
 
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,11 +55,22 @@ public class MainActivity extends AppCompatActivity {
                 uname = username.getText().toString();
                 pswd = password.getText().toString();
 
-                if(uname.equals("admin") && pswd.equals("admin")){
-                    Toast.makeText(MainActivity.this, "LOGIN SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(MainActivity.this, "LOGIN FAILED", Toast.LENGTH_SHORT).show();
-                }
+                studentapi.getStudent(uname)
+                        .enqueue(new Callback<StudentModel>() {
+                            @Override
+                            public void onResponse(Call<StudentModel> call, Response<StudentModel> response) {
+
+                                String s = response.body().getin;
+
+                                Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+                            }
+
+                            @Override
+                            public void onFailure(Call<StudentModel> call, Throwable t) {
+
+                            }
+                        });
+
 
             }
         });
@@ -53,13 +79,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openActivity2();
-            }
-        });
-
-        signin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSettings();
             }
         });
     }
