@@ -26,6 +26,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    static StudentModel s = new StudentModel();
     String uname, pswd;
     TextView username;
     TextView password;
@@ -43,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
 
         signin = (MaterialButton) findViewById(R.id.signinbtn);
         signupbtn = (MaterialButton) findViewById(R.id.signupbtn);
-
 
         //use retrofit service
         RetroFitService retrofit = new RetroFitService();
@@ -66,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
                                 if(!response.isSuccessful()){
                                     Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
                                 }else {
-
-                                    StudentModel s = new StudentModel();
                                     s=(StudentModel)response.body();
 
                                     if(s.getPassword().equals(pswd)){
@@ -110,5 +108,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+    public StudentModel getStudent(){
+        return s;
+    }
 }

@@ -284,11 +284,9 @@ public class StudentModel {
 			this.fieldrank = fieldrank;
 		}
 
-
 		public long getId() {
 			return id;
 		}
-
 
 
 		public void setId(long id) {
@@ -296,11 +294,9 @@ public class StudentModel {
 		}
 
 
-
 		public String getUsername() {
 			return username;
 		}
-
 
 
 		public void setUsername(String username) {
@@ -308,17 +304,13 @@ public class StudentModel {
 		}
 
 
-
 		public String getPassword() {
 			return password;
 		}
 
-
-
 		public void setPassword(String password) {
 			this.password = password;
 		}
-
 
 		@Override
 		public String toString() {
@@ -327,8 +319,4 @@ public class StudentModel {
 					+ ", batchrank=" + batchrank + ", fieldrank=" + fieldrank + ", uni=" + uni + ", batch=" + batch
 					+ ", faculty=" + faculty + ", field=" + field + "]";
 		}
-
-		
-		
-		
 }

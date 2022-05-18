@@ -192,7 +192,6 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
             StudentModel student = new StudentModel();
             student.setUsername(name);
             student.setPassword(p1);
-
             student.setRep(isrep);
             student.setEmail(mail);
             student.setUni(uni);

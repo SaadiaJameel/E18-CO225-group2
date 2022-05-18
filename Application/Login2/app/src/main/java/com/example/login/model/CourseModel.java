@@ -6,11 +6,11 @@ public class CourseModel {
 
     @SerializedName("id")
     private long id;
-    @SerializedName( "semId")
-    private int semId;
+    @SerializedName( "semid")
+    private long semid;
 
     @SerializedName( "coursecode")
-    private int coursecode;
+    private String coursecode;
 
     @SerializedName("coursename")
     private String coursename;
@@ -30,10 +30,9 @@ public class CourseModel {
     public CourseModel(){};
 
 
-    public CourseModel(int semId, int coursecode, String coursename, int credits, int quizp, int assignmentp,
+    public CourseModel(long semid, String coursecode, String coursename, int credits, int quizp, int assignmentp,
                        int projectp) {
-
-        this.semId = semId;
+        this.semid = semid;
         this.coursecode = coursecode;
         this.coursename = coursename;
         this.credits = credits;
@@ -50,19 +49,19 @@ public class CourseModel {
         this.id = id;
     }
 
-    public int getSemId() {
-        return semId;
+    public long getSemId() {
+        return semid;
     }
 
-    public void setSemId(int semId) {
-        this.semId = semId;
+    public void setSemId(long semId) {
+        this.semid = semId;
     }
 
-    public int getCoursecode() {
+    public String getCoursecode() {
         return coursecode;
     }
 
-    public void setCoursecode(int coursecode) {
+    public void setCoursecode(String coursecode) {
         this.coursecode = coursecode;
     }
 
@@ -106,4 +105,10 @@ public class CourseModel {
         this.projectp = projectp;
     }
 
+    @Override
+    public String toString() {
+        return "CourseModel [id=" + id + ", semId=" + semid + ", coursecode=" + coursecode + ", coursename="
+                + coursename + ", credits=" + credits + ", quizp=" + quizp + ", assignmentp=" + assignmentp
+                + ", projectp=" + projectp + "]";
+    }
 }

@@ -63,10 +63,6 @@ public class StudentModel implements Parcelable{
 
     }
 
-
-
-
-
     public StudentModel(String username, String password, String email, int batchgroup, int fieldgroup,
                         boolean isRep, float gpa, int batchrank, int fieldrank, String uni, String batch, String faculty,
                         String field) {

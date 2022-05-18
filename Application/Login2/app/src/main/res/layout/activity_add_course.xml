@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:layout_marginTop="10dp"
+        android:inputType="number"
         android:hint="Number of Credits"
         android:background="#30ffffff"
         android:textColorHint="@color/white"

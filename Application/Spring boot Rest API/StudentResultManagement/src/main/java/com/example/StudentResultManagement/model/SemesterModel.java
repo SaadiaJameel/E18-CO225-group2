@@ -1,10 +1,14 @@
 package com.example.StudentResultManagement.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "semester")
 public class SemesterModel {
 	
 	@Id
@@ -24,13 +28,15 @@ public class SemesterModel {
 		
 	}
 
-	
+
 	public SemesterModel(int fieldgroup, int semnumber, boolean iscommited) {
 		
 		this.fieldgroup = fieldgroup;
 		this.semnumber = semnumber;
 		this.iscommited = iscommited;
 	}
+
+
 
 	public boolean isIscommited() {
 		return iscommited;
@@ -63,7 +69,11 @@ public class SemesterModel {
 	public void setSemnumber(int semnumber) {
 		this.semnumber = semnumber;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "SemesterModel [id=" + id + ", fieldgroup=" + fieldgroup + ", semnumber=" + semnumber + ", iscommited="
+				+ iscommited + "]";
+	}
 	
 }

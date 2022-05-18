@@ -1,20 +1,23 @@
 package com.example.StudentResultManagement.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
+@Entity
+@Table(name = "course")
 public class CourseModel {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@Column(name = "semId")
-	private int semId;
+	@Column(name = "semid")
+	private long semid;
 	
 	@Column(name = "coursecode")
-	private int coursecode;
+	private String coursecode;
 	
 	@Column(name = "coursename")
 	private String coursename;
@@ -30,14 +33,16 @@ public class CourseModel {
 	
 	@Column(name = "projectp")
 	private int projectp;
-
 	
 	
-	
-	public CourseModel(int semId, int coursecode, String coursename, int credits, int quizp, int assignmentp,
-			int projectp) {
+	public CourseModel() {
 		
-		this.semId = semId;
+	}
+
+	public CourseModel(long semid, String coursecode, String coursename, int credits, int quizp, int assignmentp,
+			int projectp) {
+		super();
+		this.semid = semid;
 		this.coursecode = coursecode;
 		this.coursename = coursename;
 		this.credits = credits;
@@ -54,19 +59,19 @@ public class CourseModel {
 		this.id = id;
 	}
 
-	public int getSemId() {
-		return semId;
+	public long getSemId() {
+		return semid;
 	}
 
-	public void setSemId(int semId) {
-		this.semId = semId;
+	public void setSemId(long semId) {
+		this.semid = semId;
 	}
 
-	public int getCoursecode() {
+	public String getCoursecode() {
 		return coursecode;
 	}
 
-	public void setCoursecode(int coursecode) {
+	public void setCoursecode(String coursecode) {
 		this.coursecode = coursecode;
 	}
 
@@ -109,8 +114,11 @@ public class CourseModel {
 	public void setProjectp(int projectp) {
 		this.projectp = projectp;
 	}
-	
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "CourseModel [id=" + id + ", semId=" + semid + ", coursecode=" + coursecode + ", coursename="
+				+ coursename + ", credits=" + credits + ", quizp=" + quizp + ", assignmentp=" + assignmentp
+				+ ", projectp=" + projectp + "]";
+	}
 }

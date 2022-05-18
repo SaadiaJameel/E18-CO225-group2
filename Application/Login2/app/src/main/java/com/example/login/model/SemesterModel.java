@@ -20,7 +20,6 @@ public class SemesterModel{
     private boolean iscommited;
 
 
-
     public SemesterModel(int fieldgroup, int semnumber, boolean iscommited) {
 
         this.fieldgroup = fieldgroup;
@@ -66,9 +65,9 @@ public class SemesterModel{
 //    }
 //
 //
-//    public SemesterModel() {
-//
-//    }
+    public SemesterModel() {
+
+    }
 //
 //    @Override
 //    public void writeToParcel(Parcel dest, int flags) {

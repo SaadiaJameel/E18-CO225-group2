@@ -1,5 +1,6 @@
 package com.example.StudentResultManagement.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,29 +11,34 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
 import com.example.StudentResultManagement.model.CourseModel;
+import com.example.StudentResultManagement.model.SemesterModel;
 import com.example.StudentResultManagement.repository.CourseRepo;
 
 
 @RestController
 @RequestMapping("/course")
 
-public class CourseContoller {
+public class CourseController {
 	@Autowired
-	CourseRepo postRepository;
+	CourseRepo cosrepo;
+	
+	@GetMapping("/get")
+	public List<CourseModel> getAllPost() {
+		return	cosrepo.findAll();
+	}
 	
 	@PostMapping("/save")
 	public ResponseEntity<CourseModel> createPost(@RequestBody CourseModel post) {
 		try {
 			
-			
-			CourseModel _tutorial = postRepository
+			CourseModel _tutorial = cosrepo
 					.save(new CourseModel(post.getSemId(), post.getCoursecode(), post.getCoursename(), post.getCredits(),
 							post.getQuizp() , post.getAssignmentp() ,post.getProjectp()));
-							
 			
 			return new ResponseEntity<>(_tutorial, HttpStatus.CREATED);
 		} catch (Exception e) {
@@ -42,12 +48,30 @@ public class CourseContoller {
 	
 	@GetMapping("/save/{id}")
 	public ResponseEntity<CourseModel> getPostById(@PathVariable("id") long id) {
-		Optional<CourseModel> post = postRepository.findById(id);
+		Optional<CourseModel> post = cosrepo.findById(id);
 		 
 		if (post.isPresent()) {
 			return new ResponseEntity<>(post.get(), HttpStatus.OK);
 		} else {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+	}
+//	
+//	@GetMapping("/get/{semid}")
+//	public ResponseEntity<List<CourseModel>> getbyfieldgrou(@RequestParam long semid) {
+//		try {
+//			return new ResponseEntity<List<CourseModel>>(posRepository.findBySemid(semid), HttpStatus.OK);
+//		}catch (Exception e) {
+//			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);	
+//		}
+//	}
+	
+	@GetMapping("/get/{semid}")
+	public ResponseEntity<List<CourseModel>> getsemid(@RequestParam long semid) {
+		try {
+			return new ResponseEntity<List<CourseModel>>(cosrepo.findBySemid(semid), HttpStatus.OK);
+		}catch (Exception e) {
+			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);	
 		}
 	}
 }
