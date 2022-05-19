@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class RetroFitService {
+public class  RetroFitService {
 
     //make retrofit object
     private Retrofit retrofit;

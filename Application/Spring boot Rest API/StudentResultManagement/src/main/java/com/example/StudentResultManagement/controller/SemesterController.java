@@ -18,7 +18,6 @@ import com.example.StudentResultManagement.model.SemesterModel;
 import com.example.StudentResultManagement.repository.SemRepo;
 
 
-
 @RestController
 @RequestMapping("/semester")
 

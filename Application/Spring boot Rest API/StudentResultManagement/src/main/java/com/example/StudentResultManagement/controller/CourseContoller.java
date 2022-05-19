@@ -29,11 +29,12 @@ public class CourseContoller {
 		try {
 			
 			
-			CourseModel _tutorial = postRepository
+			CourseModel _tutorial;
+			_tutorial = postRepository
 					.save(new CourseModel(post.getSemId(), post.getCoursecode(), post.getCoursename(), post.getCredits(),
 							post.getQuizp() , post.getAssignmentp() ,post.getProjectp()));
-							
-			
+
+
 			return new ResponseEntity<>(_tutorial, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);

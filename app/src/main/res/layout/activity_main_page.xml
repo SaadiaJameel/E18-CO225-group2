@@ -102,7 +102,7 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/expected_gpa"
         android:layout_width="78dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -141,7 +141,7 @@
         app:iconTint="@color/white" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/button_calculate"
         android:layout_width="129dp"
         android:layout_height="59dp"
         android:layout_alignParentStart="true"
