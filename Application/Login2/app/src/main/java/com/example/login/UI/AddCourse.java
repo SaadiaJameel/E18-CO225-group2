@@ -132,6 +132,8 @@ import com.example.login.net.studentService;
 import com.example.login.retrofit.RetroFitService;
 import com.google.android.material.button.MaterialButton;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -164,6 +166,7 @@ public class AddCourse extends AppCompatActivity {
 
         //TextView displayText = findViewById(R.id.displaymessage);     //text to display
         MaterialButton addCourse = findViewById(R.id.courseAdd);       //button
+        MaterialButton addAllcourses = findViewById(R.id.addAllcourses);
 
 
         //use retrofit service
@@ -192,13 +195,14 @@ public class AddCourse extends AppCompatActivity {
             course.setAssignmentp(Ass);
             course.setProjectp(Project);
             course.setSemid(AddSemester.semi);
+            course.setFieldgroup(MainActivity.s.getFieldgroup());
 
             courseapi.addcourse(course)
                     .enqueue(new Callback<CourseModel>() {
                         @Override
                         public void onResponse(Call<CourseModel> call, Response<CourseModel> response) {
                             Toast.makeText(AddCourse.this, "New Course Added", Toast.LENGTH_SHORT).show();
-                            openAddSemester();
+                            refresh();
                         }
 
                         @Override
@@ -207,11 +211,23 @@ public class AddCourse extends AppCompatActivity {
                         }
                     });
         });
+
+        addAllcourses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSettings();
+            }
+        });
     }
 
 
-    public void openAddSemester(){
-        Intent intent = new Intent(this, AddSemester.class);
+    public void refresh(){
+        Intent intent = new Intent(this, AddCourse.class);
+        startActivity(intent);
+    }
+
+    public void openSettings(){
+        Intent intent = new Intent(this, SettingsMain.class);
         startActivity(intent);
     }
 }

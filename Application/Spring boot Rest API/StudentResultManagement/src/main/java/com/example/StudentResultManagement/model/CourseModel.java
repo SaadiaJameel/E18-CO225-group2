@@ -34,13 +34,17 @@ public class CourseModel {
 	@Column(name = "projectp")
 	private int projectp;
 	
+	@Column(name = "fieldgroup")
+	private int fieldgroup;
+	
 	
 	public CourseModel() {
 		
 	}
 
 	public CourseModel(long semid, String coursecode, String coursename, int credits, int quizp, int assignmentp,
-			int projectp) {
+			int projectp, int fieldgroup) {
+		super();
 		this.semid = semid;
 		this.coursecode = coursecode;
 		this.coursename = coursename;
@@ -48,6 +52,7 @@ public class CourseModel {
 		this.quizp = quizp;
 		this.assignmentp = assignmentp;
 		this.projectp = projectp;
+		this.fieldgroup = fieldgroup;
 	}
 
 	public long getId() {
@@ -114,10 +119,19 @@ public class CourseModel {
 		this.projectp = projectp;
 	}
 
+	public int getFieldgroup() {
+		return fieldgroup;
+	}
+
+	public void setFieldgroup(int fieldgroup) {
+		this.fieldgroup = fieldgroup;
+	}
+
 	@Override
 	public String toString() {
-		return "CourseModel [id=" + id + ", semId=" + semid + ", coursecode=" + coursecode + ", coursename="
+		return "CourseModel [id=" + id + ", semid=" + semid + ", coursecode=" + coursecode + ", coursename="
 				+ coursename + ", credits=" + credits + ", quizp=" + quizp + ", assignmentp=" + assignmentp
-				+ ", projectp=" + projectp + "]";
+				+ ", projectp=" + projectp + ", fieldgroup=" + fieldgroup + "]";
 	}
+
 }

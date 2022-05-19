@@ -2,6 +2,7 @@ package com.example.login.UI;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,8 +12,10 @@ import android.widget.Toast;
 
 import com.example.login.R;
 import com.example.login.model.CourseModel;
+import com.example.login.model.GradesModel;
 import com.example.login.model.StudentModel;
 import com.example.login.net.courseService;
+import com.example.login.net.gradeService;
 import com.example.login.retrofit.RetroFitService;
 import com.google.android.material.button.MaterialButton;
 
@@ -38,14 +41,20 @@ public class EachCourse extends AppCompatActivity {
         EditText e2 = findViewById(R.id.Assignment);
         EditText e3 = findViewById(R.id.project);
         EditText e4 = findViewById(R.id.expected);
+        EditText e5 = findViewById(R.id.Final);
         TextView t1 = findViewById(R.id.calculate);
         MaterialButton m1 = findViewById(R.id.see);
+        MaterialButton m2 = findViewById(R.id.enterFinal);
 
         //use retrofit service
         RetroFitService retrofit = new RetroFitService();
 
         //create instance of employee api object
         courseService courseapi =retrofit.getRetrofit().create(courseService.class);
+
+
+        //create instance of employee api object
+        gradeService gradesapi =retrofit.getRetrofit().create(gradeService.class);
 
 //        m1.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -113,6 +122,7 @@ public class EachCourse extends AppCompatActivity {
 
 
                                     int expMark = (80 - totalDone) * (100/finalPercentage);
+//                                    t1.setText("Mark to be obtained is "+expMark+"%");
                                     t1.setText("Aim for "+expMark+"% at the final exam");
                                 }
 
@@ -126,9 +136,31 @@ public class EachCourse extends AppCompatActivity {
             }
         });
 
+        m2.setOnClickListener(view ->{
 
+            long stdID = MainActivity.s.getId();
+            String finalGrade = String.valueOf(e5.getText());
+            boolean isFinal = true;
 
+            GradesModel gradesmodel = new GradesModel();
+            gradesmodel.setStudentid(stdID);
+            gradesmodel.setFinalgrade(finalGrade);
+            gradesmodel.setIsfinalized(isFinal);
 
+            gradesapi.addgrade(gradesmodel)
+                    .enqueue(new Callback<GradesModel>() {
+                        @Override
+                        public void onResponse(Call<GradesModel> call, Response<GradesModel> response) {
+                            Toast.makeText(EachCourse.this, "Grade added", Toast.LENGTH_SHORT).show();
+                            opencoursepageStudent();
+                        }
+
+                        @Override
+                        public void onFailure(Call<GradesModel> call, Throwable t) {
+
+                        }
+                    });
+        });
 //        courseapi.getcourses(semID)
 //                .enqueue(new Callback<List<CourseModel>>() {
 //                    @Override
@@ -159,5 +191,10 @@ public class EachCourse extends AppCompatActivity {
 //
 //                    }
 //                });
+    }
+
+    public  void opencoursepageStudent(){
+        Intent intent = new Intent(this, coursePageStudent.class);
+        startActivity(intent);
     }
 }

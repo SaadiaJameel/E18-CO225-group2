@@ -13,6 +13,6 @@ import com.example.StudentResultManagement.model.StudentModel;
 public interface StudentRepository extends JpaRepository<StudentModel, Long> {
 	
 	Optional<StudentModel> findByUsername(String username);
-	
+	List<StudentModel> findByFieldgroup(int fieldgroup);
 }
 

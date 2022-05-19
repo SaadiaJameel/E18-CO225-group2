@@ -27,5 +27,6 @@ import com.example.StudentResultManagement.model.SemesterModel;
 public interface CourseRepo extends JpaRepository<CourseModel, Long> {
 	
 	List<CourseModel> findBySemid(long semid);
+	
 }
 
