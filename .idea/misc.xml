@@ -22,23 +22,6 @@
         <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2-main/E18-CO225-group2-main/Application/Login2/app/src/main/res/layout/content_expected_marks.xml" value="0.264" />
         <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2-main/E18-CO225-group2-main/Application/Login2/app/src/main/res/layout/content_main_page.xml" value="0.1598731884057971" />
         <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2-main/E18-CO225-group2-main/Application/Login2/app/src/main/res/layout/fragment_first.xml" value="0.1598731884057971" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_add_course.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_add_semester.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_change_handles.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_each_course.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_each_semester.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_expected_grade.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_expected_marks.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_main.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_main_page.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_new_admin.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_semester_all_student.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/activity_settings_main.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/content_each_course.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/content_expected_grade.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/content_expected_marks.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/fragment_first.xml" value="0.1721014492753623" />
-        <entry key="..\:/Users/Nimuthu/Desktop/E18-CO225-group2/app/src/main/res/layout/fragment_first2.xml" value="0.1721014492753623" />
         <entry key="..\:/Users/Saadia Jameel/Desktop/Login2/app/src/main/res/layout/activity_add_course.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Saadia Jameel/Desktop/Login2/app/src/main/res/layout/activity_add_semester.xml" value="0.3484375" />
         <entry key="..\:/Users/Saadia Jameel/Desktop/Login2/app/src/main/res/layout/activity_main.xml" value="0.2703804347826087" />
@@ -63,6 +46,6 @@
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
-    <option name="id" value="jpab" />
+    <option name="id" value="Android" />
   </component>
 </project>
