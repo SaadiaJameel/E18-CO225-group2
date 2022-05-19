@@ -20,6 +20,7 @@ public class SemesterModel{
     private boolean iscommited;
 
 
+
     public SemesterModel(int fieldgroup, int semnumber, boolean iscommited) {
 
         this.fieldgroup = fieldgroup;

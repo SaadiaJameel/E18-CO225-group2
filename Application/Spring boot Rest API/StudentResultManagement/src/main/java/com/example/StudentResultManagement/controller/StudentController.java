@@ -2,6 +2,7 @@
 
 package com.example.StudentResultManagement.controller;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.StudentResultManagement.model.CourseModel;
 import com.example.StudentResultManagement.model.StudentModel;
 import com.example.StudentResultManagement.repository.StudentRepository;
 
@@ -25,6 +28,11 @@ public class StudentController {
 	@Autowired
 	StudentRepository postRepository;
 	
+	@GetMapping("/get")
+	public List<StudentModel> getAllPost() {
+		return	postRepository.findAll();
+	}
+	
 	
 	@GetMapping("/get/{username}")
 	public ResponseEntity<StudentModel> getPostbyName(@PathVariable("username") String username) {
@@ -36,7 +44,8 @@ public class StudentController {
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
 	}
-		
+	
+	
 		
 	@PostMapping("/save")
 	public ResponseEntity<StudentModel> createPost(@RequestBody StudentModel post) {
@@ -57,5 +66,7 @@ public class StudentController {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 	}
+	
+	
 	
 }

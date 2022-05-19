@@ -236,43 +236,6 @@ public class SemesterAllStudent extends AppCompatActivity implements View.OnClic
 //            @Override
 //            public void onClick(View v) {
 
-        if(length != 0){
-            for(int i = 0 ; i <length ; ++i){
-                layout.removeView(btns[i]);
-            }
-        }
-
-        semapi.getSemesters(field)
-                .enqueue(new Callback<List<SemesterModel>>() {
-                    @Override
-                    public void onResponse(Call<List<SemesterModel>> call, Response<List<SemesterModel>> response) {
-
-                        List<SemesterModel> myheroList = response.body();
-                        length = myheroList.size();
-                        btns = new Button[length];
-
-                        for (int i = 0 ;  i < length ;  i++) {
-//                                    semNumber = myheroList.get(i).getSemnumber();
-                            semNumber = myheroList.get(i).getId();
-                            String semNumberStr = "Semester " + myheroList.get(i).getSemnumber();;
-                            refreshPage(semNumberStr, i);
-                        }
-
-                    }
-
-                    @Override
-                    public void onFailure(Call<List<SemesterModel>> call, Throwable t) {
-
-                    }
-                });
-//            }
-//        });
-
-        ImageButton refresh = findViewById(R.id.refresh);
-        refresh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
                 if(length != 0){
                     for(int i = 0 ; i <length ; ++i){
                         layout.removeView(btns[i]);
@@ -302,6 +265,43 @@ public class SemesterAllStudent extends AppCompatActivity implements View.OnClic
 
                             }
                         });
+//            }
+//        });
+
+            ImageButton refresh = findViewById(R.id.refresh);
+            refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+        if(length != 0){
+            for(int i = 0 ; i <length ; ++i){
+                layout.removeView(btns[i]);
+            }
+        }
+
+        semapi.getSemesters(field)
+                .enqueue(new Callback<List<SemesterModel>>() {
+                    @Override
+                    public void onResponse(Call<List<SemesterModel>> call, Response<List<SemesterModel>> response) {
+
+                        List<SemesterModel> myheroList = response.body();
+                        length = myheroList.size();
+                        btns = new Button[length];
+
+                        for (int i = 0 ;  i < length ;  i++) {
+//                                    semNumber = myheroList.get(i).getSemnumber();
+                            semNumber = myheroList.get(i).getId();
+                            String semNumberStr = "Semester " + myheroList.get(i).getSemnumber();;
+                            refreshPage(semNumberStr, i);
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<SemesterModel>> call, Throwable t) {
+
+                    }
+                });
             }
         });
 
@@ -359,3 +359,5 @@ public class SemesterAllStudent extends AppCompatActivity implements View.OnClic
         openCoursePage();
     }
 }
+
+

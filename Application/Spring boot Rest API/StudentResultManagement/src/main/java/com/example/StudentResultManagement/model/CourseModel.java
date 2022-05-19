@@ -41,7 +41,6 @@ public class CourseModel {
 
 	public CourseModel(long semid, String coursecode, String coursename, int credits, int quizp, int assignmentp,
 			int projectp) {
-		super();
 		this.semid = semid;
 		this.coursecode = coursecode;
 		this.coursename = coursename;
@@ -59,12 +58,12 @@ public class CourseModel {
 		this.id = id;
 	}
 
-	public long getSemId() {
+	public long getSemid() {
 		return semid;
 	}
 
-	public void setSemId(long semId) {
-		this.semid = semId;
+	public void setSemid(long semid) {
+		this.semid = semid;
 	}
 
 	public String getCoursecode() {
