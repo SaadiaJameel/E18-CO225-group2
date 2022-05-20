@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".UI.ViewGPA">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/topic"
+        android:padding="20dp"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:text="GPA AND RANK"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GPA"
+        android:layout_below="@+id/topic"
+        android:padding="15dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="250dp"
+        android:text="GPA:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GPAValue"
+        android:layout_below="@+id/topic"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="200dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fieldrank"
+        android:layout_below="@+id/GPA"
+        android:padding="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="250dp"
+        android:text="Field Rank:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fieldrankValue"
+        android:layout_below="@+id/GPA"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/batchrank"
+        android:layout_below="@+id/fieldrank"
+        android:padding="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="200dp"
+        android:text="Batch Rank:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/batchrankValue"
+        android:layout_below="@+id/fieldrank"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>

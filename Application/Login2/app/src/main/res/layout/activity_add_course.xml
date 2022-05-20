@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".UI.AddCourse">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/topic"
+            android:text="Enter course details"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            />
+
+    <EditText
+        android:id="@+id/CourseCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:hint="Course Code"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/CourseName"
+        android:layout_below="@+id/CourseCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Course Name"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/Credits"
+        android:layout_below="@+id/CourseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Number of Credits"
+        android:background="#30ffffff"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/QuizP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/Credits"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Quiz- Percentage"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        />
+
+    <EditText
+        android:id="@+id/AssP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/QuizP"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Assignment- Percentage"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        />
+
+    <EditText
+        android:id="@+id/ProjP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/AssP"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Project- Percentage"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        />
+
+    <EditText
+        android:id="@+id/FinalP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/ProjP"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Final Exam- Percentage"
+        android:textColorHint="@color/white"
+        android:textSize="18dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/courseAdd"
+        android:layout_below="@+id/FinalP"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/cardview_shadow_start_color"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:text="ADD COURSE"
+
+        />
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addAllcourses"
+            android:layout_below="@+id/courseAdd"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="add all courses to semester"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
